@@ -54,13 +54,13 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <nav class="link-effect-2" id="link-effect-2">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="{% url "homepage" %}"><span data-hover="Home">Home</span></a></li>
-                  <li><a href="{% url "aboutpage" %}"><span data-hover="About">About</span></a></li>
-                  <li><a href="{% url "servicepage" %}"><span data-hover="Services">Services</span></a></li>
-                  <li><a href="{% url "projectpage" %}"><span data-hover="Projects">Projects</span></a></li>  
-                  <li><a href="{% url "coursepage" %}"><span data-hover="Courses">Courses</span></a></li>
+                  <li {% if section == "homepage" %} class="active"{% endif %}><a href="{% url "homepage" %}"><span data-hover="Home">Home</span></a></li>
+                  <li {% if section == "aboutpage" %} class="active"{% endif %}><a href="{% url "aboutpage" %}"><span data-hover="About">About</span></a></li>
+                  <li {% if section == "servicepage" %} class="active"{% endif %}><a href="{% url "servicepage" %}"><span data-hover="Services">Services</span></a></li>
+                  <li {% if section == "projectpage" %} class="active"{% endif %}><a href="{% url "projectpage" %}"><span data-hover="Projects">Projects</span></a></li>  
+                  <li {% if section == "coursepage" %} class="active"{% endif %}><a href="{% url "coursepage" %}"><span data-hover="Courses">Courses</span></a></li>
                   <li><a href=#><span data-hover="Codes">Codes</span></a></li>
-                  <li><a href="{% url "contactpage" %}"><span data-hover="Contact">Contact</span></a></li>
+                  <li {% if section == "contactpage" %} class="active"{% endif %}><a href="{% url "contactpage" %}"><span data-hover="Contact">Contact</span></a></li>
                 </ul>
               </nav>
           </div>
