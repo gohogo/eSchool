@@ -7,6 +7,7 @@
 <link href="{% static 'css/commonstyle.css' %}" rel="stylesheet" type="text/css" media="all" />
 <link rel="stylesheet" href="{% static 'css/ken-burns.css' %}" type="text/css" media="all" />
 <link rel="stylesheet" href="{% static 'css/animate.min.css' %}" type="text/css" media="all" />
+<link rel="stylesheet" href="{% static 'css/smoothbox.css' %}" type='text/css' media="all" />
 <!--css-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -53,13 +54,13 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <nav class="link-effect-2" id="link-effect-2">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="index.html"><span data-hover="Home">Home</span></a></li>
-                  <li><a href="about.html"><span data-hover="About">About</span></a></li>
-                  <li><a href="services.html"><span data-hover="Services">Services</span></a></li>
-                  <li><a href="projects.html"><span data-hover="Projects">Projects</span></a></li>  
-                  <li><a href="courses.html"><span data-hover="Courses">Courses</span></a></li>
-                  <li><a href="codes.html"><span data-hover="Codes">Codes</span></a></li>
-                  <li><a href="contact.html"><span data-hover="Contact">Contact</span></a></li>
+                  <li class="active"><a href="{% url "homepage" %}"><span data-hover="Home">Home</span></a></li>
+                  <li><a href="{% url "aboutpage" %}"><span data-hover="About">About</span></a></li>
+                  <li><a href="{% url "servicepage" %}"><span data-hover="Services">Services</span></a></li>
+                  <li><a href="{% url "projectpage" %}"><span data-hover="Projects">Projects</span></a></li>  
+                  <li><a href="{% url "coursepage" %}"><span data-hover="Courses">Courses</span></a></li>
+                  <li><a href=#><span data-hover="Codes">Codes</span></a></li>
+                  <li><a href="{% url "contactpage" %}"><span data-hover="Contact">Contact</span></a></li>
                 </ul>
               </nav>
           </div>
